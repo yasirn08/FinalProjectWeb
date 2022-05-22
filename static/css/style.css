@@ -28,25 +28,25 @@ h2 {
     text-align: left;
 }
 
-.full {}
+.full {
+    margin-left: 25%;
+    width: 60%;
+}
 
 .custom-file-upload {
     padding-top: 20px;
-    bottom: 3px solid red;
-    width: 30%;
-    text-align: right;
-    height: 50px;
+    text-align: center;
+    height: 80px;
 }
 
-::-ms-browse {
-    border: 2in;
-}
-
-.form {
-    width: 33%;
+.form1 {
     text-align: center;
 }
 
 .number {
     margin-top: 20%;
+}
+
+.image {
+    margin-top: 20px;
 }
