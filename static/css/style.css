@@ -1,0 +1,17 @@
+body {
+    color: #fff;
+    padding: 55px 25px;
+    background-color: ;
+}
+
+h1 {
+    font-weight: normal;
+    font-size: 40px;
+    font-weight: normal;
+    text-transform: uppercase;
+    span {
+        font-size: 13px;
+        display: block;
+        padding-left: 4px;
+    }
+}
