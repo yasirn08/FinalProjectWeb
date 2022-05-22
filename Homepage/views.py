@@ -39,7 +39,7 @@ def expression(request):
         g = fs.url('read2.jpg')
         g = g[1:]
 
-        img_list = [f, g]
+        img_list = [g]
 
         context = {'images': img_list}
 
