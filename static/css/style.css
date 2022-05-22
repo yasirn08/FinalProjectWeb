@@ -6,22 +6,22 @@ body {
     color: aliceblue !important;
 }
 
+.upload {
+    margin-bottom: 30px;
+}
+
 .homepage {
     background: rgb(78, 66, 66) !important;
     border: 2px solid gray;
     width: 6%;
     text-align: center;
     border-radius: 10px;
+    margin-bottom: 30px;
 }
 
 a {
     text-decoration: none !important;
     color: white !important;
-}
-
-.homepage:hover {
-    text-decoration: none !important;
-    color: black !important;
 }
 
 h2 {
@@ -45,4 +45,8 @@ h2 {
 .form {
     width: 33%;
     text-align: center;
+}
+
+.number {
+    margin-top: 20%;
 }

@@ -34,14 +34,14 @@ def expression(request):
 
         f = f[1:]
         char = plate_detection(f)
-        show_results(char)
+        number = show_results(char)
 
         g = fs.url('read2.jpg')
         g = g[1:]
 
         img_list = [g]
 
-        context = {'images': img_list}
+        context = {'images': img_list,'plate':number}
 
         return render(request, 'a.html', context)
 

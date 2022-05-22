@@ -10,29 +10,33 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
 <body>
-    <div class="homepage">
-        <a href="http://localhost:8000">Home</a>
-    </div>
-    <div class="full">
-        <div class="form1">
-            <form action="{% url 'expression' %}" method="POST" enctype="multipart/form-data" class="form-1">
-                {% csrf_token %}
-                <h1 class="upload">Upload a photo</h1>
-                <input name="car_image" type="file" />
-                <input type="submit" value="Submit" />
-            </form>
+    <div>
+        <div class="homepage">
+            <a href="http://localhost:8000">Home</a>
         </div>
-        <div class="custom-file-upload">
-            <h2>Extracted License Plate</h2>
-            {% for image in images%}
-            <img class="image" src={{image}} alt="Image not found" height="100" width="500">
-            <br>
-            <br> {% endfor %}
-
+        <div class="full">
+            <div class="form1">
+                <form action="{% url 'expression' %}" method="POST" enctype="multipart/form-data" class="form-1">
+                    {% csrf_token %}
+                    <h1 class="upload">Upload a photo</h1>
+                    <input name="car_image" type="file" />
+                    <input type="submit" value="Submit" />
+                </form>
+            </div>
+            <div class="custom-file-upload">
+                <h2>Extracted License Plate:</h2>
+                {% for image in images%}
+                <div>
+                    <img class="image" src={{image}} alt="Image not found" height="100" width="500">
+                </div>
+                <br>
+                <br> {% endfor %}
+            </div>
+            <div class="number">
+                <h2>Extracted License Plate Number:</h2>
+                <h3>"{{plate}}"</h3>
+            </div>
         </div>
-        <h1>{{plate}}</h1>
-
-
     </div>
 </body>
 
