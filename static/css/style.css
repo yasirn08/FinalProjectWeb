@@ -1,17 +1,19 @@
 body {
-    color: #fff;
-    padding: 55px 25px;
-    background-color: ;
+    background-color: lightblue;
 }
 
-h1 {
-    font-weight: normal;
-    font-size: 40px;
-    font-weight: normal;
-    text-transform: uppercase;
-    span {
-        font-size: 13px;
-        display: block;
-        padding-left: 4px;
-    }
+.full {}
+
+.custom-file-upload .image1 {
+    border: 5px solid red;
+    height: 50px;
+}
+
+::-ms-browse {
+    border: 2in;
+}
+
+form {
+    width: 33%;
+    text-align: center;
 }
