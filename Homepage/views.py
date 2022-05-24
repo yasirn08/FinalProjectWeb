@@ -13,7 +13,7 @@ from django.http import HttpResponse
 
 # Create your views here.
 
-
+list_length = []
 
 def home(request):
     return render(request, 'a.html', {'titles': 'Django', 'link': 'http://127.0.0.1:8000'})
@@ -146,14 +146,14 @@ def segmentation(image):
     segment_image_binary[72:75, :] = 255
     segment_image_binary[:, 330:333] = 255
 
-    dimensions = [LP_WIDTH / 6,
-                  LP_WIDTH / 2,
+    dimensions = [LP_WIDTH / 5,
+                  LP_WIDTH / 1,
                   LP_HEIGHT / 10,
                   2 * LP_HEIGHT / 3]
     cv2.imwrite('media/contour.jpg', segment_image_binary)
 
     char_list = contouring(dimensions, segment_image_binary)
-
+    list_length.append(char_list)
     return char_list
 
 
